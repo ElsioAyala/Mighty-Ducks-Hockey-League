@@ -27,7 +27,7 @@
 .nav-main{
     position: absolute;
     right: 5px;
-    top: 58px;
+    top: 55px;
 }
 
 .nav-main a {
@@ -79,11 +79,13 @@
 .content-main-title{
     font-size: 1.3em;
     font-style: oblique;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .content-main-detail{
-    margin: 5px 0 20px 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-indent: 20px;
     font-size: 1.2em;
 }
 
