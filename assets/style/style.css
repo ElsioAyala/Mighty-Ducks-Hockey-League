@@ -1,21 +1,34 @@
 :root {
     --height-banner: 300px;
-    --primary-color: #4474C1;
-    --secundary-color: #72AC50;
+    --height-footer: 70px;
+    --max-width-page: 1200px;
+    --primary-color: #4474c1;
+    --secundary-color: #72ac50;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Comic Neue', sans-serif;
+    font-family: "Comic Neue", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    /*En el caso de haber más contenido, el footer no tape dicho contenido*/
+    padding-bottom: calc(var(--height-footer) + 20px);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--max-width-page);
     margin-left: auto;
     margin-right: auto;
     position: relative;
+}
+
+.header {
+    padding: 0.1px;
 }
 
 .title {
@@ -27,7 +40,7 @@
 .nav-main {
     position: absolute;
     right: 5px;
-    top: 55px;
+    top: 75px;
 }
 
 .nav-main a {
@@ -45,7 +58,6 @@
 .nav-main a.active {
     background-color: var(--secundary-color);
 }
-
 
 .banner-container {
     height: var(--height-banner);
@@ -81,7 +93,6 @@
 .content-main-title {
     font-size: 1.3em;
     font-style: oblique;
-    font-weight: 700;
 }
 
 .content-main-detail {
@@ -89,4 +100,23 @@
     margin-bottom: 20px;
     text-indent: 20px;
     font-size: 1.2em;
+}
+
+footer {
+    height: var(--height-footer);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: var(--height-footer);
+
+}
+
+footer p {
+    background-color: #bdbdbd;
+    height: 100%;
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    vertical-align: middle;
 }
