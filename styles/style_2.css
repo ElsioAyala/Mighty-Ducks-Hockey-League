@@ -1,0 +1,133 @@
+:root {
+    --height-banner: 300px;
+    --height-footer: 60px;
+    --max-width-page: 1200px;
+    --primary-color: #4474c1;
+    --secundary-color: #72ac50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Neue", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    /*En el caso de haber más contenido, el footer no tape dicho contenido*/
+    padding-bottom: calc(var(--height-footer) + 20px);
+}
+
+.container {
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.header {
+    padding: 0.1px;
+}
+
+.title {
+    font-size: 3em;
+    font-style: oblique;
+    margin: 10px 0;
+}
+
+.nav-main {
+    position: absolute;
+    right: 5px;
+    top: 65px;
+    z-index: 1;
+}
+
+.nav-main a {
+    padding: 5px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid black;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+.nav-main a > span, .gallery {
+    display: none;
+}
+
+.nav-main a.active {
+    background-color: var(--secundary-color);
+}
+
+.banner-container {
+    height: var(--height-banner);
+    background-image: url(../assets/image/design1_image2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.section-title {
+    text-align: center;
+    padding: 5px;
+    font-size: 1.7em;
+    border: 1px solid #111;
+}
+
+.section-title > span {
+    display: none;
+}
+
+.logo {
+    width: 150px;
+    position: absolute;
+    top: 445px;
+
+}
+
+.content-main {
+    margin-top: 40px;
+    margin-left: 200px;
+}
+
+.content-main-title {
+    font-size: 1.3em;
+    font-style: oblique;
+}
+
+.content-main-detail {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-indent: 20px;
+    font-size: 1.3em;
+}
+
+.content-main-detail a {
+    color: var(--primary-color);
+    text-decoration-color: #111;
+}
+
+
+
+footer {
+    height: var(--height-footer);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: var(--height-footer);
+
+}
+
+footer p {
+    background-color: #bdbdbd;
+    height: 100%;
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
