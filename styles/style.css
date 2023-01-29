@@ -1,0 +1,144 @@
+:root {
+    --height-banner: 300px;
+    --height-footer: 60px;
+    --max-width-page: 1200px;
+    --primary-color: #111;
+    --secundary-color: #f7e92f;
+    --links-color: #4474c1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Neue", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    /*En el caso de haber más contenido, el footer no tape dicho contenido*/
+    padding-bottom: calc(var(--height-footer) + 20px);
+}
+
+.container {
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.header {
+    padding: 0.1px;
+}
+
+.title {
+    font-size: 4rem;
+    font-style: oblique;
+    position: absolute;
+    top: .1em;
+    left: .3em;
+    text-shadow: 4px 4px 2px #020202d4;
+    color: var(--secundary-color);
+    z-index: 100;
+}
+
+.nav-main a.gallery{
+    display: none;
+}
+
+.nav-main {
+    position: absolute;
+    top: 400px;
+    z-index: 300;
+}
+
+.nav-main a {
+	padding: 5px 20px;
+	font-weight: bold;
+	font-size: 1.1em;
+	display: block;
+	margin-bottom: 50px;
+    color: var(--links-color);
+    transition: all .3s;
+}
+
+.nav-main a.active {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-main a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.banner-container {
+    height: var(--height-banner);
+    background-image: url(../assets/image/design1_image1.jpg);
+    background-size: cover;
+    background-position: 0 -100px;
+    filter: brightness(0.8);
+    /*margin-top: 4px;*/
+    
+}
+
+.section-title {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 1.7em;
+    margin-top: 4px
+}
+
+.logo {
+	width: 130px;
+	position: absolute;
+	top: 250px;
+	z-index: 200;
+	background-color: white;
+	right: 100px;
+	border: 2px solid var(--primary-color);
+}
+
+.content-main {
+    margin-top: 4em;
+    margin-left: 200px;
+}
+
+.content-main-title {
+    font-size: 1.5em;
+    font-style: oblique;
+}
+
+.content-main-detail {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-indent: 20px;
+    font-size: 1.3em;
+}
+
+.content-main-detail a {
+    color: var(--links-color);
+    text-decoration-color: var(--primary-color)
+}
+
+footer {
+    height: var(--height-footer);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: var(--height-footer);
+
+}
+
+footer p {
+    background-color: var(--primary-color);
+    height: 100%;
+    max-width: var(--max-width-page);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+}
