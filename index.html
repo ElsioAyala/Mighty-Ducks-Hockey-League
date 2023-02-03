@@ -5,44 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/image/Icon-Mighty-ducks.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/image/Icon-Mighty-ducks.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css" type="text/css">
-    <!-- <link rel="stylesheet" href="./styles/style_2.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="./styles/style_3.css" type="text/css"> -->
     <title>Home MDHL</title>
 </head>
 
 <body>
-    <header class="header container">
-        <a href="./"><img src="./assets/image/Logo%20Mighty%20ducks-01.png" alt="Logo Mighty Ducks" class="logo"></a>
-        <h1 class="title">Mighty Ducks Hockey League</h1>
-        <nav class="nav-main">
-            <a href="#" class="active">Home</a>
-            <a href="./about.html">About <span>MDHL</span></a>
-            <a href="./gallery.html" class="gallery">Gallery</a>
-            <a href="./contact.html">Contact</a>
-        </nav>
-        <figure class="banner-container"></figure>
+    <header class="header">
+        <div class="header__container container">
+            <div class="logo">
+                <img src="./assets/image/LogoMightyducks.png" alt="Logo Mighty Ducks" class="logo__img">
+                <h1 class="logo__title">Mighty Ducks Hockey League</h1>
+            </div>
+            <nav class="nav">
+                <a class="nav__link nav__link--active" href="#">Home</a>
+                <a class="nav__link" href="./about.html">About</a>
+                <a class="nav__link" href="./rules.html">Rules</a>
+                <a class="nav__link" href="./game_info.html">Game Info</a>
+                <a class="nav__link" href="./contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main class="container">
-        <section>
-            <h2 class="section-title">Upcoming Events</h2>
+    <main class="main">
+
+        <figure class="banner">
+            <img class="banner__img" src="./assets/image/design1_image1.jpg" alt="banner hockey">
+        </figure>
+
+        <section class="section container">
+            <h2 class="section__title">Upcoming Events</h2>
             <div class="content-main">
-                <h3 class="content-main-title">August 4</h3>
-                <p class="content-main-detail">MDSL Fundraiser</p>
+                <h3 class="content-main__title">August 4</h3>
+                <p class="content-main__detail">MDSL Fundraiser</p>
 
-                <h3 class="content-main-title">August 16</h3>
-                <p class="content-main-detail">Season kick-off: Meet the Teams</p>
+                <h3 class="content-main__title">August 16</h3>
+                <p class="content-main__detail">Season kick-off: Meet the Teams</p>
 
-                <h3 class="content-main-title">September 1</h3>
-                <p class="content-main-detail">First Game of the season (Check Game Schedule for details)</p>
+                <h3 class="content-main__title">September 1</h3>
+                <p class="content-main__detail">First Game of the season (Check Game Schedule for details)</p>
             </div>
         </section>
     </main>
-    <footer>
-        <p>© MDHL - 2023</p>
+    <footer class="footer">
+        <div class="footer__content container">
+            <p class="footer__text">© MDHL - 2023</p>
+            <a class="footer__link" href="./rules.html" target="_blank">Rules of Play & Policies</a>
+        </div>
     </footer>
 </body>
 

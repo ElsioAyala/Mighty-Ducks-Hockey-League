@@ -5,34 +5,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./assets/image/Icon-Mighty-ducks.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/image/Icon-Mighty-ducks.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap"rel="stylesheet" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <!-- <link rel="stylesheet" href="./styles/style_2.css" /> -->
-    <!-- <link rel="stylesheet" href="./styles/style_3.css" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
     <title>About MDHL</title>
 </head>
 
 <body>
-    <header class="header container">
-        <a href="./"><img src="./assets/image/Logo%20Mighty%20ducks-01.png" alt="Logo Mighty Ducks" class="logo"></a>
-        <h1 class="title">Mighty Ducks Hockey League</h1>
-        <nav class="nav-main">
-            <a href="./">Home</a>
-            <a href="#" class="active">About <span>MDHL</span></a>
-            <a href="./gallery.html" class="gallery">Gallery</a>
-            <a href="./contact.html">Contact</a>
-        </nav>
-        <figure class="banner-container"></figure>
+    <header class="header">
+        <div class="header__container container">
+            <div class="logo">
+                <img src="./assets/image/LogoMightyducks.png" alt="Logo Mighty Ducks" class="logo__img">
+                <h1 class="logo__title">Mighty Ducks Hockey League</h1>
+            </div>
+            <nav class="nav">
+                <a class="nav__link" href="./">Home</a>
+                <a class="nav__link nav__link--active" href="#">About</a>
+                <a class="nav__link" href="./rules.html">Rules</a>
+                <a class="nav__link" href="./game_info.html">Game Info</a>
+                <a class="nav__link" href="./contact.html">Contact</a>
+            </nav>
+        </div>
     </header>
-    <main class="container">
-        <section>
-            <h2 class="section-title">About <span>MDHL</span></h2>
+    <main class="main">
+        <figure class="banner">
+            <img class="banner__img" src="./assets/image/design1_image1.jpg" alt="banner hockey">
+        </figure>
+        <section class="section container">
+            <h2 class="section__title">About <span>MDHL</span></h2>
             <div class="content-main">
                 <article>
-                    <h2 class="content-main-title">Mision</h2>
-                    <p class="content-main-detail">
+                    <h2 class="content-main__title">Mision</h2>
+                    <p class="content-main__detail">
                         To support young athletes living Chicago's northside neighborhood,
                         who have an interest in learning and playing soccer, with
                         opportunities to learn and practice skills related to the game of
@@ -41,16 +47,16 @@
                     </p>
                 </article>
                 <article>
-                    <h2 class="content-main-title">Vision</h2>
-                    <p class="content-main-detail">
+                    <h2 class="content-main__title">Vision</h2>
+                    <p class="content-main__detail">
                         The Mighty Ducks Hockey League aspires to develop strong,
                         well-rounded and mindful athletes through the building of character,
                         self-discipline, and leadership.
                     </p>
                 </article>
                 <article>
-                    <h2 class="content-main-title">General Information</h2>
-                    <p class="content-main-detail">
+                    <h2 class="content-main__title">General Information</h2>
+                    <p class="content-main__detail">
                         The Mighty Ducks Soccer League was established in 1996 to provide
                         athletes residing Chicago's northside neighborhoods an environment
                         in which to learn and play hockey. To be a member of MDHL, you must
@@ -62,8 +68,11 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>© MDHL - 2023</p>
+    <footer class="footer">
+        <div class="footer__content container">
+            <p class="footer__text">© MDHL - 2023</p>
+            <a class="footer__link" href="./rules.html" target="_blank">Rules of Play & Policies</a>
+        </div>
     </footer>
 </body>
 

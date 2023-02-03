@@ -1,144 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&family=Oswald:wght@300;400;500;600;700&family=Roboto&family=Rowdies&display=swap');
+
+
 :root {
+    --height-header: 80px;
     --height-banner: 300px;
     --height-footer: 60px;
     --max-width-page: 1200px;
-    --primary-color: #111;
-    --secundary-color: #f7e92f;
+    --primary-color: #F8DE4A;
+    --secundary-color: #619F98;
+    --tertiary-color: #C34839;
+    --text-color: #333;
     --links-color: #4474c1;
 }
 
+/**
+ * RESET
+ *
+ * -------------------------------------------------------------------
+ */
+
 * {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+*:not(ol, ul) {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Comic Neue", sans-serif;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    position: relative;
-    /*En el caso de haber más contenido, el footer no tape dicho contenido*/
-    padding-bottom: calc(var(--height-footer) + 20px);
+    color: var(--text-color);
+}
+
+
+/**
+ * UTILITIES
+ *
+ * -------------------------------------------------------------------
+ */
+
+.txt-center {
+    text-align: center;
 }
 
 .container {
     max-width: var(--max-width-page);
-    margin-left: auto;
     margin-right: auto;
-    position: relative;
+    margin-left: auto;
 }
+
+
+
+/**
+ * HEADER
+ *
+ * -------------------------------------------------------------------
+ */
 
 .header {
-    padding: 0.1px;
-}
-
-.title {
-    font-size: 4rem;
-    font-style: oblique;
-    position: absolute;
-    top: .1em;
-    left: .3em;
-    text-shadow: 4px 4px 2px #020202d4;
-    color: var(--secundary-color);
-    z-index: 100;
-}
-
-.nav-main a.gallery{
-    display: none;
-}
-
-.nav-main {
-    position: absolute;
-    top: 400px;
-    z-index: 300;
-}
-
-.nav-main a {
-	padding: 5px 20px;
-	font-weight: bold;
-	font-size: 1.1em;
-	display: block;
-	margin-bottom: 50px;
-    color: var(--links-color);
-    transition: all .3s;
-}
-
-.nav-main a.active {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.nav-main a:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.banner-container {
-    height: var(--height-banner);
-    background-image: url(../assets/image/design1_image1.jpg);
-    background-size: cover;
-    background-position: 0 -100px;
-    filter: brightness(0.8);
-    /*margin-top: 4px;*/
-    
-}
-
-.section-title {
-    background-color: var(--primary-color);
-    text-align: center;
-    padding: 5px;
-    color: white;
-    font-size: 1.7em;
-    margin-top: 4px
+    min-height: var(--height-header);
+    border-bottom: 5px solid var(--secundary-color);
 }
 
 .logo {
-	width: 130px;
-	position: absolute;
-	top: 250px;
-	z-index: 200;
-	background-color: white;
-	right: 100px;
-	border: 2px solid var(--primary-color);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    width: 70px;
+}
+
+.logo__title {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-left: .5em;
+    color: var(--primary-color);
+    text-shadow: -.025em -.025em var(--tertiary-color), .025em .025em var(--tertiary-color), -.025px .025em var(--tertiary-color), .025em -.025em var(--tertiary-color), -.070em 0 var(--secundary-color);
+    -webkit-text-fill-color: var(--primary-color);
+    -webkit-text-stroke: .5px var(--tertiary-color);
+}
+
+.header__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav {
+    margin-left: 6em;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    color: white;
+    height: 80px;
+}
+
+.nav__link {
+    flex: 1;
+    color: var(--text-color);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.nav__link:hover {
+    background-color: #f7f7f7;
+}
+
+
+.nav__link::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: var(--secundary-color);
+    position: absolute;
+    bottom: -14px;
+    transform: rotate(45deg);
+    z-index: 1;
+    opacity: 0;
+    transition: all .3s;
+}
+
+
+.nav__link:hover::before {
+    opacity: 1;
+    bottom: -7px;
+}
+
+.nav__link:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav__link--active::before {
+    opacity: 1;
+    bottom: -7px;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    z-index: 3;
+}
+
+.banner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/**
+ * 02. GENERAL STYLES
+ *
+ * -------------------------------------------------------------------
+ */
+
+.main {
+    flex: 1;
+}
+
+.section {
+    position: relative;
+}
+
+.section__title {
+    background-color: var(--tertiary-color);
+    padding: .5em 1em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .25em;
+    z-index: 4;
+    color: white;
+    /*transform: translateY(-50%);*/
 }
 
 .content-main {
-    margin-top: 4em;
-    margin-left: 200px;
+    padding-top: 5em;
 }
 
-.content-main-title {
-    font-size: 1.5em;
-    font-style: oblique;
+.content-main__title {
+    font-size: 1.4rem;
+    margin-bottom: .5em;
+
 }
 
-.content-main-detail {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    text-indent: 20px;
-    font-size: 1.3em;
+.content-main__detail {
+    font-size: 1.2rem;
+    text-indent: 1.3em;
+    margin-bottom: 1.5em;
+    line-height: 1.3;
 }
 
-.content-main-detail a {
-    color: var(--links-color);
-    text-decoration-color: var(--primary-color)
+/**
+ * 02. CONTACTS
+ *
+ * -------------------------------------------------------------------
+ */
+.contact .content-main__detail{
+    text-indent: 0;
 }
 
-footer {
-    height: var(--height-footer);
-    position: absolute;
-    bottom: 0;
+.contact a {
+    color: var(--secundary-color);
+    font-weight: 700;
+}
+
+/**
+ * 02. FOOTER
+ *
+ * -------------------------------------------------------------------
+ */
+
+.footer {
+    margin-top: 2em;
+    background-color: #111;
+    color: white;
+    padding: 1em 0;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__text, .footer__link {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer__link:hover{
+    color: white;
+}
+
+
+/**
+ *  RULES  OF PLAY & POLICIES
+ *
+ * -------------------------------------------------------------------
+ */
+
+
+.rule-title {
+    margin-top: 2em;
+    color: var(--secundary-color);
+}
+
+.rules .content-main__title {
+    margin-top: 1.5em;
+}
+
+.rules .content-main__detail {
+    margin-bottom: 0;
+}
+
+.rules ol {
+    font-size: 1.4rem;
+}
+
+.rules ol ol {
+    list-style-type: lower-alpha;
+}
+
+.rules ol ol li {
+    margin-bottom: 0;
+}
+
+
+/**
+ *  GAME INFORMATION
+ *
+ * -------------------------------------------------------------------
+ */
+
+table {
+    table-layout: fixed;
     width: 100%;
-    line-height: var(--height-footer);
-
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    margin-bottom: 1em;
 }
 
-footer p {
-    background-color: var(--primary-color);
-    height: 100%;
-    max-width: var(--max-width-page);
-    margin-left: auto;
-    margin-right: auto;
+th,
+td {
+    border-top: 1px solid rgb(172, 172, 172);
+    border-bottom: 1px solid rgb(172, 172, 172);
+    padding: .8em 0;
+}
+
+th {
+    background-color: var(--secundary-color);
+    color: white;
+}
+
+tr:nth-child(4n -2) {
+    background-color: rgb(245, 245, 245);
+}
+
+tr:nth-child(4n + 1) {
+    background-color: rgb(245, 245, 245);
+}
+
+
+[rowspan] {
     text-align: center;
-    color: #fff;
+}
+
+.caption {
+    font-size: 1.3rem;
+    margin: 1em 0;
+    font-weight: 700;
+}
+
+
+.card-contact{
+    width: 300px;
+    background-color: var(--secundary-color);
+    display: inline-flex;
+    /*: solid 1px #ccc;*/
+    padding: .5em 1em;
+    border-radius: .5em;
+    align-items: center;
+    margin: 2em;
+}
+
+.card-contact__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card-contact__detail a{
+    color: white;
+    font-size: 1.3rem;
+    margin-left: 1em;
+    text-decoration: none;
 }
