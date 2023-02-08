@@ -1,0 +1,110 @@
+:root {
+    --header-height: 5rem;
+    --banner-height: 300px;
+    --h2-font-size: 1.4rem;
+    --h3-font-size: 1.5rem;
+    --body-font-size: 1.125rem;
+    --small-font-size: 0.90rem;
+}
+
+
+/**
+ * HEADER
+ *
+ * -------------------------------------------------------------------
+ */
+
+
+.header {
+    border-bottom-width: 5px;
+}
+
+label[for="check"] {
+    display: none;
+}
+
+.logo__img {
+    width: 60px;
+}
+
+.nav {
+    position: static;
+    background-color: transparent;
+    height: auto;
+    transform: initial;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    margin-left: 2em;
+    height: 100%;
+    align-items: center;
+    max-width: inherit;
+}
+
+.nav__link {
+    --text-color: var(--text-color);
+    border-bottom: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav__link:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav__link:hover {
+    background-color: transparent;
+}
+
+.nav__link::before {
+    bottom: -8px;
+    left: 50%;
+    top: initial;
+    transform: rotate(-90deg) translateY(-50%);
+}
+
+
+.nav__link:hover::before {
+    opacity: 1;
+    left: 50%;
+    bottom: 0px;
+}
+
+.nav__link:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav__link--active::before {
+    opacity: 1;
+    left: 50%;
+    bottom: -8px;
+    display: none;
+
+}
+
+.nav__link--active {
+    color: var(--secundary-color);
+}
+
+
+
+/**
+ *  RULES  OF PLAY & POLICIES
+ *
+ * -------------------------------------------------------------------
+ */
+
+.rules ol {
+    padding-left: 2em;
+}
+
+.card-contact__icon {
+    width: 2.5em;
+    height: 2.5em
+}
