@@ -1,0 +1,22 @@
+:root{
+    --max-width: 1440px;
+    --h1-font-size: 2rem; /*2rem*/
+    --h2-font-size: 1.5rem;
+}
+
+/**
+ * HEADER
+ *
+ * -------------------------------------------------------------------
+ */
+
+
+.logo__img {
+    width: 70px;
+}
+
+.banner {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
